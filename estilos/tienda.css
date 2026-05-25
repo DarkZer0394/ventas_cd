@@ -1,0 +1,222 @@
+body{
+	font-family: "Roboto 2", "Helvetica Neue";
+	margin:0;
+	text-align: center;
+	font-size: 14px;
+}
+
+.encabezado{
+	padding-top: 3%;
+	box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.contenedorIcon{
+	text-align: center;
+	display:flex;
+	justify-content: center;
+}
+
+.icon{
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	padding:0; margin:0;
+	background: #70c26f;
+	color: #fff;
+	color: yellow;
+	font-size: 3.0rem;
+}
+
+.icon:hover{
+	opacity:0.9;
+	filter: alpha(opacity=9);
+	color:darkgreen;
+}
+
+.usuario{
+	font-size: 1.2rem;
+}
+
+.nav{
+	width:100%;
+	padding:0; margin:0; width:100%;
+}
+
+ul{
+	width:100%;
+	padding:0; margin:0; width:100%;
+}
+
+li{
+	padding:0; margin:0;
+	list-style-type:none;
+	width:33%;
+	float:left;
+	font-size: 1.4rem;
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+}
+
+li:hover{
+	background: #C2F98E;
+	opacity: 0.8;
+	filter: alpha(opacity=8);
+}
+
+.nav-admin li{
+	width:20%;
+	font-size: 1.0rem;
+}
+
+.contenido{
+	float:none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10%;
+    font-size: 1.0rem;
+}
+
+#titulo_de_pagina{
+	margin:0;
+	padding:0;
+	padding-top:5%;
+	font-size:1.5rem;
+	color:blue;
+}
+
+#aviso{
+	color:red;
+	font-size:1.0rem;
+}
+
+form{
+	width:60%;
+}
+
+input{
+    float:none;
+    height:25px;
+    width:100%;
+    border:none;
+	display:block;
+    color: rgb(33,33,33);
+	background-color:#C2F98E;
+	border-radius: 5px;
+	margin-bottom: 4%;
+	text-align: center;
+    font-size: 1.0rem;
+}
+
+input-hover{
+	background:#D8F9B6;
+}
+
+#botonDeCanasta{
+	display:none;
+}
+#botonDeCanasta+label{
+	font-size: 4.2rem;
+	cursor: pointer;
+}
+
+#canasta{
+	text-align: center;
+	z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 800px;
+    height: auto;
+    visibility: hidden;
+	width: 80%;
+    background-color:#C2F98E;
+	border-radius: 5%;
+    opacity: 0.9; 
+	filter: alpha(opacity=9);
+}
+
+#renglones table{
+	padding:0;
+	margin:0 auto;
+    width:100%;
+	text-align: center;
+}
+	
+form >.cantidad{
+	width:30px;
+	height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border:solid 1px gray;
+}
+.agregar{
+    text-decoration:none;  
+	border-radius: 50%;
+    padding: 0;
+	margin: 0; 
+    padding-bottom: 10px; 
+	padding-left: 20px; 
+	padding-right: 20px;  
+	background: #70c26f;  
+	color:#fff;
+    font-size: 2.5rem;
+}
+
+.factura {
+    border: 1px dashed #aaa;
+    width: 60%;
+    margin: 5% auto;
+    padding: 25px;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.factura h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.encabezado-factura {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.encabezado-factura table td {
+    padding: 3px 15px 3px 0;
+    background-color: transparent;
+    width: auto;
+    text-align: left;
+    height: auto;
+    border: none;
+    display: table-cell;
+    color: #000;
+}
+
+.detalle-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.detalle-tabla th {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.detalle-tabla td {
+    padding: 5px;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    text-align: left;
+    border: none;
+    display: table-cell;
+    color: #000;
+}

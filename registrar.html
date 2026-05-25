@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Tienda</title>
+	<link rel="stylesheet" href="estilos/tienda.css" />
+	<script src="https://www.google.com/recaptcha/enterprise.js" async defer> </script>
+</head>
+<body>
+	<div class="contenido">
+		<form name="registrar"class="form" method="POST" >
+			<p id="titulo_de_pagina">Regístrate</p>
+			<input type="text" required name="nombre" placeholder="Nombre" />
+			<input type="text" required name="apellido" placeholder="Apellido" />
+			<input type="text" required name="direccion" placeholder="Direccion" />
+			<input type="text" required name="codigo_postal" placeholder="Código postal" />
+			<input type="text" required name="ciudad" placeholder="Ciudad" />
+			<input type="email" required name="correo_electronico" placeholder="Correo electrónico" />
+			<input type="password" required name="contraseña" placeholder="Contraseña" />
+			
+			<div class="g-recaptcha" data-sitekey="6Lf9GLAsAAAAANzDChYrWJapX64pZCDnrPeO8fYg"> </div>
+			<br/>
+			<div class="contenedorIcon">
+				<input type="submit" class="icon" id="enviar" name="enviar" value="&rarr;"/>
+			</div>
+			<a href="index.php">Regresar</a>
+		</form>
+	</div>
