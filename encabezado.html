@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<title>Tienda</title>
+	<link rel="stylesheet" href="estilos/tienda.css" />
+	<script>
+		function confirmarSalida(){
+			var salir= confirm('Deseas Salir?');
+			if(salir){
+				location.href='index.php?pagina=salir';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="encabezado">
+		<div class="contenedorIcon">
+			<div class="icon">&#x266C;</div>
+		</div>
+		<?php
+		if(isset($_SESSION["ID"])&&
+			$_SESSION["STATUS"]== "ACTIVA"){
+			if($_SESSION["ROL"]==0){
+			?>
+			<div class="usuario">
+				<p id="usuario">Usuario:<?php echo $_SESSION["USUARIO"];?></p>
+			</div>
+			<div class="nav">
+				<ul>
+					<li onclick="location.href=
+						'index.php?pagina=editar_perfil'">Perfil</li>
+					<li onclick="location.href=
+						'index.php?pagina=tienda'">Tienda</li>
+					<li onclick="location.href=
+						'index.php?pagina=salir'">Salir</li>
+				</ul>
+			</div>
+			<?php
+			}elseif($_SESSION["ROL"]==1){
+			?>
+			<div class="usuario">
+				<p id="usuario">Administrador:
+				<?php echo $_SESSION["USUARIO"]; ?></p>
+			</div>
+			<div class="nav-admin">
+			<ul>
+				<li onclick="location.href=
+					'index.php?pagina=mostrar_albumes'">Albumes</li>
+				<li onclick="location.href=
+					'index.php?pagina=mostrar_clientes'">Clientes</li>
+				<li onclick="location.href=
+					'index.php?pagina=mostrar_ordenes'">Ordenes</li>
+				<li onclick="location.href=
+					'index.php?pagina=mostrar_informes'">Informes</li>
+				<li onclick="confirmarSalida()">Salir</li>
+			</ul>
+			</div>
+			<?php
+			}
+		}
+		?>
+	</div>
+</html>
